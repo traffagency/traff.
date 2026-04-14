@@ -32,9 +32,16 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-16 flex items-center justify-between">
-        <a href="#" className="text-2xl font-extrabold tracking-[-1px] flex items-center">
-          traff.
-        </a>
+        <div className="w-32 md:w-48 h-10 md:h-12 relative flex items-center">
+          <a href="#" className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+            <img 
+              src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000" 
+              alt="traff." 
+              className="h-32 md:h-40 w-auto object-contain max-w-none"
+              referrerPolicy="no-referrer"
+            />
+          </a>
+        </div>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-8">

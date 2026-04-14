@@ -8,8 +8,13 @@ export default function Footer() {
       <div className="container mx-auto px-6 md:px-16">
         <div className="flex flex-col md:flex-row justify-between items-start gap-12">
           <div className="max-w-xs">
-            <a href="#" className="text-2xl font-extrabold tracking-[-1px]">
-              traff.
+            <a href="#" className="flex items-center">
+              <img 
+                src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000" 
+                alt="traff." 
+                className="h-16 w-auto object-contain"
+                referrerPolicy="no-referrer"
+              />
             </a>
             <p className="text-[13px] text-zinc-500 mt-4 leading-relaxed">
               {t.footer.desc}

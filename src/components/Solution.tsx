@@ -18,8 +18,13 @@ export default function Solution() {
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-yellow rounded-full blur-3xl opacity-50" />
             <div className="relative bg-zinc-900 rounded-[2rem] p-8 md:p-12 text-white overflow-hidden">
               <div className="absolute top-0 right-0 p-4">
-                <div className="w-12 h-12 rounded-full bg-brand-accent flex items-center justify-center text-black font-bold">
-                  traff.
+                <div className="w-24 h-24 rounded-full bg-brand-accent flex items-center justify-center p-4">
+                  <img 
+                    src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000" 
+                    alt="traff." 
+                    className="w-full h-full object-contain"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
               </div>
               <h3 className="text-3xl font-bold mb-8 italic">{t.solution.transformation}</h3>

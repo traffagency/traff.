@@ -34,9 +34,7 @@ export default function ContactModal({ children, type = "call" }: ContactModalPr
 
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        {children}
-      </DialogTrigger>
+      <DialogTrigger render={children} />
       <DialogContent className="sm:max-w-[425px] rounded-xl">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold tracking-tight">{title}</DialogTitle>
