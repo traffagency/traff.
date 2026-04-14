@@ -5,6 +5,7 @@ import { useLanguage } from "@/src/LanguageContext";
 
 import ContactModal from "./ContactModal";
 import CalendlyModal from "./CalendlyModal";
+import CopyEmail from "./CopyEmail";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -41,6 +42,8 @@ export default function Hero() {
                 </Button>
               </ContactModal>
             </div>
+            
+            <CopyEmail />
             
             <div className="mt-10 text-[13px] italic text-zinc-500">
               {t.hero.trustQuote}

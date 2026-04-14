@@ -8,6 +8,7 @@ import About from "@/src/components/About";
 import FinalCTA from "@/src/components/FinalCTA";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
+import ScrollToTop from "@/src/components/ScrollToTop";
 import ContactModal from "@/src/components/ContactModal";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "../LanguageContext";
@@ -29,6 +30,7 @@ export default function Home() {
         <FinalCTA />
       </main>
       <Footer />
+      <ScrollToTop />
       
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-6 left-6 right-6 z-40 md:hidden">

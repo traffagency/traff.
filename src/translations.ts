@@ -13,6 +13,7 @@ export const translations = {
       subheadline: "We turn local businesses into premium digital brands. Premium social media management, content systems, and branding for SMEs who mean business.",
       ctaAudit: "Schedule your free audit",
       ctaCall: "I want you to contact me!",
+      emailPrompt: "Or send us an email yourself at hello@traffagency.com",
       trustQuote: "\"Helping local businesses look professional online, fast.\"",
       cards: {
         management: {
@@ -178,6 +179,7 @@ export const translations = {
       subheadline: "Convertimos negocios locales en marcas digitales premium. Gestión de redes sociales, sistemas de contenido y branding para PYMES que van en serio.",
       ctaAudit: "Agenda tu auditoría gratuita",
       ctaCall: "¡Quiero que me contactéis!",
+      emailPrompt: "O mándanos tú mismo un email a hello@traffagency.com",
       trustQuote: "\"Ayudando a negocios locales a verse profesionales en línea, rápido.\"",
       cards: {
         management: {

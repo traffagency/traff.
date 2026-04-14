@@ -4,6 +4,7 @@ import { useLanguage } from "@/src/LanguageContext";
 
 import ContactModal from "./ContactModal";
 import CalendlyModal from "./CalendlyModal";
+import CopyEmail from "./CopyEmail";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
@@ -33,6 +34,9 @@ export default function FinalCTA() {
                 {t.finalCta.ctaAudit}
               </Button>
             </CalendlyModal>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <CopyEmail centered />
           </div>
           <p className="mt-8 text-sm font-medium text-black/60 uppercase tracking-widest">
             {t.finalCta.footerNote}

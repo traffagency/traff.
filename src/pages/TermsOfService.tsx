@@ -2,6 +2,7 @@ import { useLanguage } from "@/src/LanguageContext";
 import { motion } from "motion/react";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
+import ScrollToTop from "@/src/components/ScrollToTop";
 import { useEffect } from "react";
 
 export default function TermsOfService() {
@@ -93,6 +94,7 @@ export default function TermsOfService() {
         </div>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

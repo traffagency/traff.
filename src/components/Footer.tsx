@@ -35,8 +35,6 @@ export default function Footer() {
               <h4 className="text-[11px] font-bold uppercase tracking-[1.5px] mb-6">{t.footer.connect}</h4>
               <ul className="space-y-4 text-[13px] text-zinc-500">
                 <li><a href="#" className="hover:text-black transition-colors">Instagram</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Twitter</a></li>
               </ul>
             </div>
             <div>
