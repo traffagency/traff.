@@ -1,0 +1,55 @@
+import { useLanguage } from "@/src/LanguageContext";
+
+export default function Footer() {
+  const { t } = useLanguage();
+
+  return (
+    <footer className="py-16 bg-white border-t border-zinc-100">
+      <div className="container mx-auto px-6 md:px-16">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+          <div className="max-w-xs">
+            <a href="#" className="text-2xl font-extrabold tracking-[-1px]">
+              traff.
+            </a>
+            <p className="text-[13px] text-zinc-500 mt-4 leading-relaxed">
+              {t.footer.desc}
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-12">
+            <div>
+              <h4 className="text-[11px] font-bold uppercase tracking-[1.5px] mb-6">{t.footer.company}</h4>
+              <ul className="space-y-4 text-[13px] text-zinc-500">
+                <li><a href="#" className="hover:text-black transition-colors">{t.footer.about}</a></li>
+                <li><a href="#services" className="hover:text-black transition-colors">{t.nav.services}</a></li>
+                <li><a href="#" className="hover:text-black transition-colors">{t.footer.work}</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-[11px] font-bold uppercase tracking-[1.5px] mb-6">{t.footer.connect}</h4>
+              <ul className="space-y-4 text-[13px] text-zinc-500">
+                <li><a href="#" className="hover:text-black transition-colors">Instagram</a></li>
+                <li><a href="#" className="hover:text-black transition-colors">LinkedIn</a></li>
+                <li><a href="#" className="hover:text-black transition-colors">Twitter</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-[11px] font-bold uppercase tracking-[1.5px] mb-6">{t.footer.legal}</h4>
+              <ul className="space-y-4 text-[13px] text-zinc-500">
+                <li><a href="#" className="hover:text-black transition-colors">{t.footer.privacy}</a></li>
+                <li><a href="#" className="hover:text-black transition-colors">{t.footer.terms}</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-16 pt-8 border-t border-zinc-50 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-zinc-400 uppercase tracking-widest font-bold">
+          <p>© 2026 traff. agency. {t.footer.rights}</p>
+          <a href="mailto:hello@traff.agency" className="hover:text-black transition-colors lowercase tracking-normal font-medium">
+            hello@traff.agency
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
