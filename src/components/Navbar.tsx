@@ -5,6 +5,9 @@ import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/src/LanguageContext";
 
 import ContactModal from "./ContactModal";
+import CalendlyModal from "./CalendlyModal";
+
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const { t, language, setLanguage } = useLanguage();
@@ -20,7 +23,7 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: t.nav.services, href: "#services" },
+    { name: t.nav.services, href: "/#services" },
     { name: t.nav.work, href: "#" },
     { name: t.nav.results, href: "#" },
   ];
@@ -33,14 +36,14 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-16 flex items-center justify-between">
         <div className="w-32 md:w-48 h-10 md:h-12 relative flex items-center">
-          <a href="#" className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+          <Link to="/" className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
             <img 
               src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000&v=2" 
               alt="traff." 
               className="h-32 md:h-40 w-auto object-contain max-w-none"
               referrerPolicy="no-referrer"
             />
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Nav */}
@@ -71,11 +74,11 @@ export default function Navbar() {
             </button>
           </div>
 
-          <ContactModal type="audit">
+          <CalendlyModal>
             <Button className="rounded-lg px-5 py-2.5 text-[13px] font-semibold bg-black text-white hover:opacity-90 transition-opacity">
               {t.nav.getAudit}
             </Button>
-          </ContactModal>
+          </CalendlyModal>
         </div>
 
         {/* Mobile Toggle */}

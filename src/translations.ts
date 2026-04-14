@@ -4,15 +4,15 @@ export const translations = {
       services: "Services",
       work: "Work",
       results: "Results",
-      getAudit: "Get an Audit",
-      bookCall: "Book a call"
+      getAudit: "Schedule your free audit",
+      bookCall: "I want you to contact me!"
     },
     hero: {
       title: "Stop looking {invisible} online.",
       invisible: "invisible",
       subheadline: "We turn local businesses into premium digital brands. Premium social media management, content systems, and branding for SMEs who mean business.",
-      ctaAudit: "Get a free audit",
-      ctaCall: "Book discovery call",
+      ctaAudit: "Schedule your free audit",
+      ctaCall: "I want you to contact me!",
       trustQuote: "\"Helping local businesses look professional online, fast.\"",
       cards: {
         management: {
@@ -117,8 +117,8 @@ export const translations = {
     finalCta: {
       title: "Ready to look like the {premium} brand you are?",
       premium: "premium",
-      ctaCall: "Book a free call",
-      ctaAudit: "Get a free audit",
+      ctaCall: "I want you to contact me!",
+      ctaAudit: "Schedule your free audit",
       footerNote: "No commitment. Just strategy."
     },
     footer: {
@@ -130,13 +130,15 @@ export const translations = {
       work: "Work",
       privacy: "Privacy",
       terms: "Terms",
-      rights: "All rights reserved."
+      rights: "All rights reserved.",
+      privacyTitle: "Privacy Policy",
+      termsTitle: "Terms of Service"
     },
     modal: {
       call: {
-        title: "Book a discovery call",
-        desc: "Let's discuss how we can transform your brand's digital presence.",
-        btn: "Schedule Call"
+        title: "Leave us your contact details",
+        desc: "Leave us your email or phone number and we will contact you. Let's discuss how we can transform your brand's digital presence.",
+        btn: "Contact me!"
       },
       audit: {
         title: "Get a free brand audit",
@@ -150,6 +152,8 @@ export const translations = {
         businessPlaceholder: "Your business",
         phone: "Phone Number",
         phonePlaceholder: "+1 234 567 890",
+        email: "Email",
+        emailPlaceholder: "hello@example.com",
         message: "Message",
         messagePlaceholder: "Tell us about your goals..."
       },
@@ -165,15 +169,15 @@ export const translations = {
       services: "Servicios",
       work: "Trabajo",
       results: "Resultados",
-      getAudit: "Obtener Auditoría",
-      bookCall: "Reservar llamada"
+      getAudit: "Agenda tu auditoría gratuita",
+      bookCall: "¡Quiero que me contactéis!"
     },
     hero: {
       title: "Deja de ser {invisible} en línea.",
       invisible: "invisible",
       subheadline: "Convertimos negocios locales en marcas digitales premium. Gestión de redes sociales, sistemas de contenido y branding para PYMES que van en serio.",
-      ctaAudit: "Auditoría gratuita",
-      ctaCall: "Reservar llamada",
+      ctaAudit: "Agenda tu auditoría gratuita",
+      ctaCall: "¡Quiero que me contactéis!",
       trustQuote: "\"Ayudando a negocios locales a verse profesionales en línea, rápido.\"",
       cards: {
         management: {
@@ -278,8 +282,8 @@ export const translations = {
     finalCta: {
       title: "¿Listo para lucir como la marca {premium} que eres?",
       premium: "premium",
-      ctaCall: "Reservar llamada gratis",
-      ctaAudit: "Auditoría gratuita",
+      ctaCall: "¡Quiero que me contactéis!",
+      ctaAudit: "Agenda tu auditoría gratuita",
       footerNote: "Sin compromiso. Solo estrategia."
     },
     footer: {
@@ -291,13 +295,15 @@ export const translations = {
       work: "Trabajo",
       privacy: "Privacidad",
       terms: "Términos",
-      rights: "Todos los derechos reservados."
+      rights: "Todos los derechos reservados.",
+      privacyTitle: "Política de Privacidad",
+      termsTitle: "Términos de Servicio"
     },
     modal: {
       call: {
-        title: "Reservar llamada de descubrimiento",
-        desc: "Hablemos de cómo podemos transformar la presencia digital de tu marca.",
-        btn: "Programar Llamada"
+        title: "Déjanos tus datos de contacto",
+        desc: "Déjanos tu correo electrónico o número de teléfono y contactaremos contigo. Hablemos de cómo podemos transformar la presencia digital de tu marca.",
+        btn: "¡Contactadme!"
       },
       audit: {
         title: "Obtener auditoría de marca gratis",
@@ -311,6 +317,8 @@ export const translations = {
         businessPlaceholder: "Tu negocio",
         phone: "Número de Teléfono",
         phonePlaceholder: "+34 600 000 000",
+        email: "Correo Electrónico",
+        emailPlaceholder: "hola@ejemplo.com",
         message: "Mensaje",
         messagePlaceholder: "Cuéntanos sobre tus objetivos..."
       },

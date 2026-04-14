@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import { useLanguage } from "@/src/LanguageContext";
 
 import ContactModal from "./ContactModal";
+import CalendlyModal from "./CalendlyModal";
 
 export default function Services() {
   const { t } = useLanguage();
@@ -64,11 +65,11 @@ export default function Services() {
                 </p>
                 
                 <div className="mt-8">
-                  <ContactModal type="audit">
+                  <CalendlyModal>
                     <button className="text-[12px] font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:opacity-70 transition-opacity">
                       {t.services.learnMore}
                     </button>
-                  </ContactModal>
+                  </CalendlyModal>
                 </div>
               </div>
             </motion.div>

@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/src/LanguageContext";
 
 import ContactModal from "./ContactModal";
+import CalendlyModal from "./CalendlyModal";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -28,14 +29,14 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-wrap gap-4">
-              <ContactModal type="audit">
-                <Button className="rounded-lg px-8 py-6 text-[15px] font-semibold bg-black text-white hover:opacity-90 transition-opacity group">
+              <CalendlyModal>
+                <Button className="rounded-lg px-6 md:px-10 py-6 text-[15px] font-semibold bg-black text-white hover:opacity-90 transition-opacity group">
                   {t.hero.ctaAudit}
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
-              </ContactModal>
+              </CalendlyModal>
               <ContactModal type="call">
-                <Button className="rounded-lg px-8 py-6 text-[15px] font-semibold bg-brand-yellow text-black hover:opacity-90 transition-opacity">
+                <Button className="rounded-lg px-6 md:px-10 py-6 text-[15px] font-semibold bg-brand-yellow text-black hover:opacity-90 transition-opacity">
                   {t.hero.ctaCall}
                 </Button>
               </ContactModal>

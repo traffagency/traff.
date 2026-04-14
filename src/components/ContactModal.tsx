@@ -28,11 +28,20 @@ export default function ContactModal({ children, type = "call" }: ContactModalPr
     name: "",
     businessName: "",
     phone: "",
+    email: "",
     message: ""
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!formData.phone && !formData.email) {
+      alert(t.language === "es" 
+        ? "Por favor, introduce al menos un método de contacto (teléfono o correo)." 
+        : "Please provide at least one contact method (phone or email).");
+      return;
+    }
+
     setIsLoading(true);
     
     try {
@@ -103,7 +112,17 @@ export default function ContactModal({ children, type = "call" }: ContactModalPr
                 onChange={handleChange}
                 type="tel" 
                 placeholder={t.modal.form.phonePlaceholder} 
-                required 
+                className="rounded-lg border-zinc-200" 
+              />
+            </div>
+            <div className="space-y-2">
+              <label className="text-[11px] font-bold uppercase tracking-[1.5px] text-zinc-400">{t.modal.form.email}</label>
+              <Input 
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                type="email" 
+                placeholder={t.modal.form.emailPlaceholder} 
                 className="rounded-lg border-zinc-200" 
               />
             </div>

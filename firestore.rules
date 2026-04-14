@@ -29,11 +29,13 @@ service cloud.firestore {
     }
 
     function isValidLead(data) {
-      return data.keys().hasAll(['name', 'businessName', 'phone', 'type', 'createdAt']) &&
-             data.keys().hasOnly(['name', 'businessName', 'phone', 'message', 'type', 'createdAt']) &&
+      return data.keys().hasAll(['name', 'businessName', 'type', 'createdAt']) &&
+             data.keys().hasOnly(['name', 'businessName', 'phone', 'email', 'message', 'type', 'createdAt']) &&
+             (data.keys().hasAny(['phone', 'email'])) &&
              data.name is string && data.name.size() >= 1 && data.name.size() <= 100 &&
              data.businessName is string && data.businessName.size() >= 1 && data.businessName.size() <= 100 &&
-             data.phone is string && data.phone.size() >= 5 && data.phone.size() <= 20 &&
+             (!('phone' in data) || (data.phone is string && data.phone.size() >= 5 && data.phone.size() <= 20)) &&
+             (!('email' in data) || (data.email is string && data.email.size() <= 100)) &&
              (!('message' in data) || (data.message is string && data.message.size() <= 1000)) &&
              data.type in ['call', 'audit'] &&
              data.createdAt is timestamp;

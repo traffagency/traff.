@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { useLanguage } from "@/src/LanguageContext";
 
 import ContactModal from "./ContactModal";
+import CalendlyModal from "./CalendlyModal";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
@@ -23,15 +24,15 @@ export default function FinalCTA() {
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <ContactModal type="call">
-              <Button className="rounded-lg px-10 py-7 text-lg font-bold bg-black text-white hover:opacity-90 transition-opacity w-full sm:w-auto">
+              <Button className="rounded-lg px-8 md:px-12 py-7 text-lg font-bold bg-black text-white hover:opacity-90 transition-opacity w-full sm:w-auto">
                 {t.finalCta.ctaCall}
               </Button>
             </ContactModal>
-            <ContactModal type="audit">
-              <Button variant="outline" className="rounded-lg px-10 py-7 text-lg font-bold border-black text-black hover:bg-black/5 w-full sm:w-auto">
+            <CalendlyModal>
+              <Button variant="outline" className="rounded-lg px-8 md:px-12 py-7 text-lg font-bold border-black text-black hover:bg-black/5 w-full sm:w-auto">
                 {t.finalCta.ctaAudit}
               </Button>
-            </ContactModal>
+            </CalendlyModal>
           </div>
           <p className="mt-8 text-sm font-medium text-black/60 uppercase tracking-widest">
             {t.finalCta.footerNote}
