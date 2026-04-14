@@ -148,15 +148,15 @@ export const translations = {
         namePlaceholder: "Your name",
         business: "Business Name",
         businessPlaceholder: "Your business",
-        email: "Email",
-        emailPlaceholder: "hello@example.com",
+        phone: "Phone Number",
+        phonePlaceholder: "+1 234 567 890",
         message: "Message",
         messagePlaceholder: "Tell us about your goals..."
       },
       success: {
         title: "Request Received!",
-        descCall: "We'll reach out within 24 hours to schedule your call.",
-        descAudit: "We'll reach out within 24 hours to send your audit."
+        descCall: "We'll call you in the next few days to schedule your discovery session.",
+        descAudit: "We'll call you in the next few days to discuss your free audit."
       }
     }
   },
@@ -309,15 +309,15 @@ export const translations = {
         namePlaceholder: "Tu nombre",
         business: "Nombre del Negocio",
         businessPlaceholder: "Tu negocio",
-        email: "Correo",
-        emailPlaceholder: "hola@ejemplo.com",
+        phone: "Número de Teléfono",
+        phonePlaceholder: "+34 600 000 000",
         message: "Mensaje",
         messagePlaceholder: "Cuéntanos sobre tus objetivos..."
       },
       success: {
         title: "¡Solicitud Recibida!",
-        descCall: "Nos pondremos en contacto en menos de 24 horas para programar tu llamada.",
-        descAudit: "Nos pondremos en contacto en menos de 24 horas para enviar tu auditoría."
+        descCall: "Te llamaremos en los próximos días para programar tu sesión de descubrimiento.",
+        descAudit: "Te llamaremos en los próximos días para comentar tu auditoría gratuita."
       }
     }
   }

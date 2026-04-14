@@ -1,0 +1,55 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: leads
+    // Document ID: auto-generated
+    // Fields:
+    //   - name: string (required, 1-100 chars)
+    //   - businessName: string (required, 1-100 chars)
+    //   - phone: string (required, 5-20 chars)
+    //   - message: string (optional, 0-1000 chars)
+    //   - type: string (required, enum: ['call', 'audit'])
+    //   - createdAt: timestamp (required)
+    //
+    // ===============================================================
+
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isAuthenticated() && 
+        (request.auth.token.email == "traffagency0@gmail.com" && request.auth.token.email_verified == true);
+    }
+
+    function isValidLead(data) {
+      return data.keys().hasAll(['name', 'businessName', 'phone', 'type', 'createdAt']) &&
+             data.keys().hasOnly(['name', 'businessName', 'phone', 'message', 'type', 'createdAt']) &&
+             data.name is string && data.name.size() >= 1 && data.name.size() <= 100 &&
+             data.businessName is string && data.businessName.size() >= 1 && data.businessName.size() <= 100 &&
+             data.phone is string && data.phone.size() >= 5 && data.phone.size() <= 20 &&
+             (!('message' in data) || (data.message is string && data.message.size() <= 1000)) &&
+             data.type in ['call', 'audit'] &&
+             data.createdAt is timestamp;
+    }
+
+    match /leads/{leadId} {
+      // Anyone can create a lead if it's valid
+      allow create: if isValidLead(request.resource.data);
+      
+      // Only the admin (you) can read, update, or delete leads
+      allow read, update, delete: if isAdmin();
+    }
+
+    // Default deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

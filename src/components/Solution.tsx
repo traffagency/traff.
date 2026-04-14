@@ -20,7 +20,7 @@ export default function Solution() {
               <div className="absolute top-0 right-0 p-4">
                 <div className="w-24 h-24 rounded-full bg-brand-accent flex items-center justify-center p-4">
                   <img 
-                    src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000" 
+                    src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000&v=2" 
                     alt="traff." 
                     className="w-full h-full object-contain"
                     referrerPolicy="no-referrer"

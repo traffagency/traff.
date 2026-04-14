@@ -12,6 +12,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import React from "react";
 import { useLanguage } from "@/src/LanguageContext";
+import { db } from "@/src/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 interface ContactModalProps {
   children: React.ReactNode;
@@ -21,10 +23,36 @@ interface ContactModalProps {
 export default function ContactModal({ children, type = "call" }: ContactModalProps) {
   const { t } = useLanguage();
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    businessName: "",
+    phone: "",
+    message: ""
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsLoading(true);
+    
+    try {
+      await addDoc(collection(db, "leads"), {
+        ...formData,
+        type,
+        createdAt: serverTimestamp()
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Hubo un error al enviar el formulario. Por favor, inténtalo de nuevo.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const title = type === "call" ? t.modal.call.title : t.modal.audit.title;
@@ -47,22 +75,54 @@ export default function ContactModal({ children, type = "call" }: ContactModalPr
           <form onSubmit={handleSubmit} className="space-y-4 py-4">
             <div className="space-y-2">
               <label className="text-[11px] font-bold uppercase tracking-[1.5px] text-zinc-400">{t.modal.form.name}</label>
-              <Input placeholder={t.modal.form.namePlaceholder} required className="rounded-lg border-zinc-200" />
+              <Input 
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder={t.modal.form.namePlaceholder} 
+                required 
+                className="rounded-lg border-zinc-200" 
+              />
             </div>
             <div className="space-y-2">
               <label className="text-[11px] font-bold uppercase tracking-[1.5px] text-zinc-400">{t.modal.form.business}</label>
-              <Input placeholder={t.modal.form.businessPlaceholder} required className="rounded-lg border-zinc-200" />
+              <Input 
+                name="businessName"
+                value={formData.businessName}
+                onChange={handleChange}
+                placeholder={t.modal.form.businessPlaceholder} 
+                required 
+                className="rounded-lg border-zinc-200" 
+              />
             </div>
             <div className="space-y-2">
-              <label className="text-[11px] font-bold uppercase tracking-[1.5px] text-zinc-400">{t.modal.form.email}</label>
-              <Input type="email" placeholder={t.modal.form.emailPlaceholder} required className="rounded-lg border-zinc-200" />
+              <label className="text-[11px] font-bold uppercase tracking-[1.5px] text-zinc-400">{t.modal.form.phone}</label>
+              <Input 
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                type="tel" 
+                placeholder={t.modal.form.phonePlaceholder} 
+                required 
+                className="rounded-lg border-zinc-200" 
+              />
             </div>
             <div className="space-y-2">
               <label className="text-[11px] font-bold uppercase tracking-[1.5px] text-zinc-400">{t.modal.form.message}</label>
-              <Textarea placeholder={t.modal.form.messagePlaceholder} className="rounded-lg border-zinc-200 min-h-[100px]" />
+              <Textarea 
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder={t.modal.form.messagePlaceholder} 
+                className="rounded-lg border-zinc-200 min-h-[100px]" 
+              />
             </div>
-            <Button type="submit" className="w-full py-6 rounded-lg font-bold bg-black text-white hover:opacity-90 transition-opacity">
-              {btnText}
+            <Button 
+              type="submit" 
+              disabled={isLoading}
+              className="w-full py-6 rounded-lg font-bold bg-black text-white hover:opacity-90 transition-opacity disabled:opacity-50"
+            >
+              {isLoading ? "..." : btnText}
             </Button>
           </form>
         ) : (

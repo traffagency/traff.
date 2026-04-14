@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="w-32 md:w-48 h-10 md:h-12 relative flex items-center">
           <a href="#" className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
             <img 
-              src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000" 
+              src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000&v=2" 
               alt="traff." 
               className="h-32 md:h-40 w-auto object-contain max-w-none"
               referrerPolicy="no-referrer"
