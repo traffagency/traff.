@@ -17,7 +17,7 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-white font-sans text-black selection:bg-brand-yellow selection:text-black">
+    <div className="min-h-screen bg-white font-sans text-[#1f1f1f] selection:bg-brand-yellow selection:text-[#1f1f1f]">
       <Navbar />
       <main>
         <Hero />
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-6 left-6 right-6 z-40 md:hidden">
         <ContactModal type="call">
-          <Button className="w-full py-6 rounded-lg font-bold bg-black text-white shadow-2xl hover:opacity-90 transition-opacity text-base">
+          <Button className="w-full py-6 rounded-lg font-bold bg-[#1f1f1f] text-white shadow-2xl hover:opacity-90 transition-opacity text-base">
             {t.nav.bookCall}
           </Button>
         </ContactModal>

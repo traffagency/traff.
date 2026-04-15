@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
   };
 
   return (
-    <div className="min-h-screen bg-white font-sans text-black">
+    <div className="min-h-screen bg-white font-sans text-[#1f1f1f]">
       <Navbar />
       <main className="pt-32 pb-20">
         <div className="container mx-auto px-6 md:px-16 max-w-4xl">
@@ -81,7 +81,7 @@ export default function PrivacyPolicy() {
             <div className="prose prose-zinc max-w-none space-y-8 text-zinc-600">
               {content.sections.map((section, idx) => (
                 <section key={idx}>
-                  <h2 className="text-2xl font-bold text-black mb-4">{section.h}</h2>
+                  <h2 className="text-2xl font-bold text-[#1f1f1f] mb-4">{section.h}</h2>
                   <p>{section.p}</p>
                   {section.l && (
                     <ul className="list-disc pl-6 mt-4 space-y-2">

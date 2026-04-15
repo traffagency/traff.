@@ -31,16 +31,16 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${
-        isScrolled ? "bg-white/80 backdrop-blur-md py-4 shadow-sm border-zinc-200" : "bg-white py-6 border-zinc-100"
+        isScrolled ? "bg-[#1f1f1f]/90 backdrop-blur-md py-4 shadow-sm border-[#333]" : "bg-[#1f1f1f] py-6 border-[#333]"
       }`}
     >
       <div className="container mx-auto px-6 md:px-16 flex items-center justify-between">
         <div className="w-32 md:w-48 h-10 md:h-12 relative flex items-center">
           <Link to="/" className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
             <img 
-              src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000&v=2" 
+              src="https://drive.google.com/thumbnail?id=1_1-eJpU9wq7sR344MGMtCjlhrTMBQ1cn&sz=w1000&v=2" 
               alt="traff." 
-              className="h-32 md:h-40 w-auto object-contain max-w-none"
+              className="h-32 md:h-40 w-auto object-contain max-w-none brightness-[2.5]"
               referrerPolicy="no-referrer"
             />
           </Link>
@@ -52,30 +52,30 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium hover:text-zinc-500 transition-colors"
+              className="text-sm font-medium text-[#d9d9d9] hover:text-white transition-colors"
             >
               {link.name}
             </a>
           ))}
           
-          <div className="flex items-center border-l border-zinc-200 pl-8 space-x-3">
+          <div className="flex items-center border-l border-[#333] pl-8 space-x-3">
             <button 
               onClick={() => setLanguage("en")}
-              className={`text-[11px] font-bold uppercase tracking-widest ${language === "en" ? "text-black" : "text-zinc-300 hover:text-zinc-500"}`}
+              className={`text-[11px] font-bold uppercase tracking-widest ${language === "en" ? "text-white" : "text-[#d9d9d9]/50 hover:text-[#d9d9d9]"}`}
             >
               EN
             </button>
-            <span className="text-zinc-200">/</span>
+            <span className="text-[#333]">/</span>
             <button 
               onClick={() => setLanguage("es")}
-              className={`text-[11px] font-bold uppercase tracking-widest ${language === "es" ? "text-black" : "text-zinc-300 hover:text-zinc-500"}`}
+              className={`text-[11px] font-bold uppercase tracking-widest ${language === "es" ? "text-white" : "text-[#d9d9d9]/50 hover:text-[#d9d9d9]"}`}
             >
               ES
             </button>
           </div>
 
           <CalendlyModal>
-            <Button className="rounded-lg px-5 py-2.5 text-[13px] font-semibold bg-black text-white hover:opacity-90 transition-opacity">
+            <Button className="rounded-lg px-5 py-2.5 text-[13px] font-semibold bg-[#d9d9d9] text-[#1f1f1f] hover:opacity-90 transition-opacity">
               {t.nav.getAudit}
             </Button>
           </CalendlyModal>
@@ -97,37 +97,37 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-white border-t p-6 flex flex-col space-y-4 md:hidden"
+            className="absolute top-full left-0 right-0 bg-[#1f1f1f] border-t border-[#333] p-6 flex flex-col space-y-4 md:hidden"
           >
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-lg font-medium"
+                className="text-lg font-medium text-[#d9d9d9]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
             ))}
             
-            <div className="flex items-center space-x-4 py-2 border-t border-zinc-100 mt-2 pt-4">
+            <div className="flex items-center space-x-4 py-2 border-t border-[#333] mt-2 pt-4">
               <button 
                 onClick={() => setLanguage("en")}
-                className={`text-sm font-bold uppercase tracking-widest ${language === "en" ? "text-black" : "text-zinc-300"}`}
+                className={`text-sm font-bold uppercase tracking-widest ${language === "en" ? "text-white" : "text-[#d9d9d9]/50"}`}
               >
                 English
               </button>
-              <span className="text-zinc-200">|</span>
+              <span className="text-[#333]">|</span>
               <button 
                 onClick={() => setLanguage("es")}
-                className={`text-sm font-bold uppercase tracking-widest ${language === "es" ? "text-black" : "text-zinc-300"}`}
+                className={`text-sm font-bold uppercase tracking-widest ${language === "es" ? "text-white" : "text-[#d9d9d9]/50"}`}
               >
                 Español
               </button>
             </div>
 
             <ContactModal type="call">
-              <Button className="rounded-full w-full py-6 font-bold bg-black text-white">
+              <Button className="rounded-full w-full py-6 font-bold bg-[#d9d9d9] text-[#1f1f1f]">
                 {t.nav.bookCall}
               </Button>
             </ContactModal>

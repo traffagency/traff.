@@ -63,12 +63,12 @@ export default function Hero() {
               <p className="text-[13px] text-zinc-500 leading-tight">{t.hero.cards.management.desc}</p>
             </div>
             <div className="bg-brand-yellow p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
-              <div className="inline-block px-2 py-1 bg-white/30 rounded text-[10px] font-bold mb-3 uppercase">{t.hero.cards.identity.tag}</div>
+              <div className="inline-block px-2 py-1 bg-[#f1ee8c] text-black rounded text-[10px] font-bold mb-3 uppercase">{t.hero.cards.identity.tag}</div>
               <h3 className="text-sm font-bold uppercase tracking-wider mb-2 text-black">{t.hero.cards.identity.title}</h3>
               <p className="text-[13px] text-zinc-700 leading-tight">{t.hero.cards.identity.desc}</p>
             </div>
             <div className="bg-brand-yellow p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
-              <div className="inline-block px-2 py-1 bg-white/30 rounded text-[10px] font-bold mb-3 uppercase">{t.hero.cards.strategy.tag}</div>
+              <div className="inline-block px-2 py-1 bg-[#f1ee8c] text-black rounded text-[10px] font-bold mb-3 uppercase">{t.hero.cards.strategy.tag}</div>
               <h3 className="text-sm font-bold uppercase tracking-wider mb-2 text-black">{t.hero.cards.strategy.title}</h3>
               <p className="text-[13px] text-zinc-700 leading-tight">{t.hero.cards.strategy.desc}</p>
             </div>

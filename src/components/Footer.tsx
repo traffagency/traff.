@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="max-w-xs">
             <Link to="/" className="flex items-center">
               <img 
-                src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000&v=2" 
+                src="https://drive.google.com/thumbnail?id=1_1-eJpU9wq7sR344MGMtCjlhrTMBQ1cn&sz=w1000&v=2" 
                 alt="traff." 
                 className="h-16 w-auto object-contain"
                 referrerPolicy="no-referrer"

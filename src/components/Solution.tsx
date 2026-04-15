@@ -18,9 +18,9 @@ export default function Solution() {
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-yellow rounded-full blur-3xl opacity-50" />
             <div className="relative bg-zinc-900 rounded-[2rem] p-8 md:p-12 text-white overflow-hidden">
               <div className="absolute top-0 right-0 p-4">
-                <div className="w-24 h-24 rounded-full bg-brand-accent flex items-center justify-center p-4">
+                <div className="w-24 h-24 flex items-center justify-center p-4">
                   <img 
-                    src="https://drive.google.com/thumbnail?id=1SnGxGU4uojXRNl4sndtGMnOmFVzkFqEV&sz=w1000&v=2" 
+                    src="https://drive.google.com/thumbnail?id=1_1-eJpU9wq7sR344MGMtCjlhrTMBQ1cn&sz=w1000&v=2" 
                     alt="traff." 
                     className="w-full h-full object-contain"
                     referrerPolicy="no-referrer"
@@ -70,7 +70,7 @@ export default function Solution() {
           >
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
               {t.solution.title.split("{authority}")[0]}
-              <span className="text-brand-accent">{t.solution.authority}</span>
+              <span className="bg-brand-yellow px-1">{t.solution.authority}</span>
               {t.solution.title.split("{authority}")[1]}
             </h2>
             <p className="text-xl text-zinc-600 mb-8 leading-relaxed">
