@@ -2,8 +2,7 @@ export const translations = {
   en: {
     nav: {
       services: "Services",
-      work: "Work",
-      results: "Results",
+      work: "Packages",
       getAudit: "Schedule your free audit",
       bookCall: "I want you to contact me!"
     },
@@ -128,7 +127,7 @@ export const translations = {
       connect: "Connect",
       legal: "Legal",
       about: "About",
-      work: "Work",
+      work: "Packages",
       privacy: "Privacy",
       terms: "Terms",
       rights: "All rights reserved.",
@@ -168,8 +167,7 @@ export const translations = {
   es: {
     nav: {
       services: "Servicios",
-      work: "Trabajo",
-      results: "Resultados",
+      work: "Paquetes",
       getAudit: "Agenda tu auditoría gratuita",
       bookCall: "¡Quiero que me contactéis!"
     },
@@ -184,7 +182,7 @@ export const translations = {
       cards: {
         management: {
           tag: "GESTIÓN",
-          title: "Contenido Social",
+          title: "Contenido de redes sociales",
           desc: "Sistemas de contenido mensuales que generan confianza y leads."
         },
         identity: {
@@ -294,7 +292,7 @@ export const translations = {
       connect: "Conectar",
       legal: "Legal",
       about: "Sobre nosotros",
-      work: "Trabajo",
+      work: "Paquetes",
       privacy: "Privacidad",
       terms: "Términos",
       rights: "Todos los derechos reservados.",

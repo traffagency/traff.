@@ -3,7 +3,6 @@ import Problem from "@/src/components/Problem";
 import Solution from "@/src/components/Solution";
 import Services from "@/src/components/Services";
 import Process from "@/src/components/Process";
-import SocialProof from "@/src/components/SocialProof";
 import About from "@/src/components/About";
 import FinalCTA from "@/src/components/FinalCTA";
 import Navbar from "@/src/components/Navbar";
@@ -25,7 +24,6 @@ export default function Home() {
         <Solution />
         <Services />
         <Process />
-        <SocialProof />
         <About />
         <FinalCTA />
       </main>

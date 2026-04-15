@@ -25,7 +25,6 @@ export default function Navbar() {
   const navLinks = [
     { name: t.nav.services, href: "/#services" },
     { name: t.nav.work, href: "#" },
-    { name: t.nav.results, href: "#" },
   ];
 
   return (
