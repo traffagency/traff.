@@ -13,7 +13,7 @@ export default function CalendlyModal({ children }: CalendlyModalProps) {
 
   return (
     <>
-      <div onClick={() => setIsOpen(true)} className="cursor-pointer">
+      <div onClick={() => setIsOpen(true)} className="cursor-pointer w-fit inline-block">
         {children}
       </div>
       

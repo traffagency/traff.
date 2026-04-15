@@ -58,7 +58,29 @@ export const translations = {
     services: {
       title: "Our Services",
       subheadline: "Tailored solutions for small businesses that want to look professional and grow fast.",
-      learnMore: "Learn More"
+      learnMore: "Learn More",
+      list: [
+        {
+          title: "DIGITAL STARTUP",
+          desc: "We get you ready to start receiving client contacts in just a few days."
+        },
+        {
+          title: "RESULTS OPTIMIZATION",
+          desc: "We analyze what you're already doing and tell you how to get more clients without spending more."
+        },
+        {
+          title: "Branding",
+          desc: "Complete renovation of your brand image."
+        },
+        {
+          title: "CONTENT CREATION",
+          desc: "We take care of creating all the necessary content for your digital platforms."
+        },
+        {
+          title: "METRICS TRACKING",
+          desc: "We accompany you in the analysis and understanding of your future digital results."
+        }
+      ]
     },
     solution: {
       transformation: "The Transformation",
@@ -223,7 +245,29 @@ export const translations = {
     services: {
       title: "Nuestros Servicios",
       subheadline: "Soluciones a medida para pequeños negocios que quieren verse profesionales y crecer rápido.",
-      learnMore: "Saber Más"
+      learnMore: "Saber Más",
+      list: [
+        {
+          title: "PUESTA EN MARCHA DIGITAL",
+          desc: "Te dejamos listo para empezar a recibir contactos de clientes en pocos días."
+        },
+        {
+          title: "OPTIMIZACIÓN DE RESULTADOS",
+          desc: "Analizamos lo que ya estás haciendo y te decimos cómo conseguir más clientes sin gastar más."
+        },
+        {
+          title: "Branding",
+          desc: "Renovación completa de la imagen de tu marca."
+        },
+        {
+          title: "CREACIÓN DE CONTENIDO",
+          desc: "Nos encargamos de crear todo el contenido necesario para tus plataformas digitales"
+        },
+        {
+          title: "SEGUIMIENTO DE MÉTRICAS",
+          desc: "Te acompañamos en el análisis y entendimiento de tus futuros resultados digitales."
+        }
+      ]
     },
     solution: {
       transformation: "La Transformación",
