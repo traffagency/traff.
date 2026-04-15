@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram } from "lucide-react";
 import { useLanguage } from "@/src/LanguageContext";
 
 import ContactModal from "./ContactModal";
@@ -110,20 +110,31 @@ export default function Navbar() {
               </a>
             ))}
             
-            <div className="flex items-center space-x-4 py-2 border-t border-[#333] mt-2 pt-4">
-              <button 
-                onClick={() => setLanguage("en")}
-                className={`text-sm font-bold uppercase tracking-widest ${language === "en" ? "text-white" : "text-[#d9d9d9]/50"}`}
+            <div className="flex items-center justify-between py-2 border-t border-[#333] mt-2 pt-4">
+              <div className="flex items-center space-x-4">
+                <button 
+                  onClick={() => setLanguage("en")}
+                  className={`text-sm font-bold uppercase tracking-widest ${language === "en" ? "text-white" : "text-[#d9d9d9]/50"}`}
+                >
+                  English
+                </button>
+                <span className="text-[#333]">|</span>
+                <button 
+                  onClick={() => setLanguage("es")}
+                  className={`text-sm font-bold uppercase tracking-widest ${language === "es" ? "text-white" : "text-[#d9d9d9]/50"}`}
+                >
+                  Español
+                </button>
+              </div>
+              
+              <a 
+                href="https://www.instagram.com/agency.traff/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#d9d9d9] hover:text-white transition-colors"
               >
-                English
-              </button>
-              <span className="text-[#333]">|</span>
-              <button 
-                onClick={() => setLanguage("es")}
-                className={`text-sm font-bold uppercase tracking-widest ${language === "es" ? "text-white" : "text-[#d9d9d9]/50"}`}
-              >
-                Español
-              </button>
+                <Instagram size={20} />
+              </a>
             </div>
 
             <ContactModal type="call">
