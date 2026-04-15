@@ -34,20 +34,20 @@ export default function Navbar() {
         isScrolled ? "bg-[#1f1f1f]/90 backdrop-blur-md py-4 shadow-sm border-[#333]" : "bg-[#1f1f1f] py-6 border-[#333]"
       }`}
     >
-      <div className="container mx-auto px-6 md:px-16 flex items-center justify-between">
-        <div className="w-32 md:w-48 h-10 md:h-12 relative flex items-center">
+      <div className="container mx-auto px-6 lg:px-16 flex items-center justify-between">
+        <div className="w-32 lg:w-48 h-10 lg:h-12 relative flex items-center">
           <Link to="/" className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
             <img 
               src="https://drive.google.com/thumbnail?id=1_1-eJpU9wq7sR344MGMtCjlhrTMBQ1cn&sz=w1000&v=2" 
               alt="traff." 
-              className="h-32 md:h-40 w-auto object-contain max-w-none brightness-[2.5]"
+              className="h-32 lg:h-40 w-auto object-contain max-w-none"
               referrerPolicy="no-referrer"
             />
           </Link>
         </div>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -83,7 +83,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2"
+          className="lg:hidden p-2 text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X /> : <Menu />}
@@ -97,7 +97,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-[#1f1f1f] border-t border-[#333] p-6 flex flex-col space-y-4 md:hidden"
+            className="absolute top-full left-0 right-0 bg-[#1f1f1f] border-t border-[#333] p-6 flex flex-col space-y-4 lg:hidden"
           >
             {navLinks.map((link) => (
               <a
