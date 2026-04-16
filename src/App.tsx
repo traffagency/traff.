@@ -4,6 +4,8 @@ import LoadingScreen from "./components/LoadingScreen";
 import { AnimatePresence } from "motion/react";
 
 const Home = lazy(() => import("./pages/Home"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+const PackagesPage = lazy(() => import("./pages/PackagesPage"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 
@@ -27,6 +29,8 @@ export default function App() {
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/packages" element={<PackagesPage />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
         </Routes>

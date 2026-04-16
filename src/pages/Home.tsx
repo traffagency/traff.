@@ -2,6 +2,7 @@ import Hero from "@/src/components/Hero";
 import Problem from "@/src/components/Problem";
 import Solution from "@/src/components/Solution";
 import Services from "@/src/components/Services";
+import PackagesSection from "@/src/components/PackagesSection";
 import Process from "@/src/components/Process";
 import About from "@/src/components/About";
 import FinalCTA from "@/src/components/FinalCTA";
@@ -23,6 +24,7 @@ export default function Home() {
         <Problem />
         <Solution />
         <Services />
+        <PackagesSection />
         <Process />
         <About />
         <FinalCTA />

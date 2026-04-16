@@ -190,6 +190,170 @@ export const translations = {
     },
     loading: {
       experience: "Loading Experience"
+    },
+    servicesPage: {
+      title: "Our Premium {services}",
+      services: "Services",
+      description: "Scale your business with our specialized marketing systems.",
+      backToHome: "Back to home",
+      contactBtn: "Inquire about this service",
+      sections: {
+        digitalStartup: {
+          title: "DIGITAL STARTUP",
+          desc: "We get you ready to start receiving client contacts in just a few days, even if you've never done online marketing.",
+          whatWeDo: {
+            title: "What we do:",
+            items: [
+              "Analyze your business and offer",
+              "Define a clear message to attract clients",
+              "Create and configure your first campaigns",
+              "Design simple and effective ads",
+              "Activate a contact system (WhatsApp or form)"
+            ]
+          },
+          result: {
+            title: "Result:",
+            desc: "You start receiving real contacts and understand how your online acquisition works"
+          }
+        },
+        resultsOptimization: {
+          title: "RESULTS OPTIMIZATION",
+          desc: "We analyze what you're already doing and tell you exactly what to change to get more clients without spending more.",
+          whatWeDo: {
+            title: "What we do:",
+            items: [
+              "Review your current campaigns, social media, or channels",
+              "Analyze where your clients come from",
+              "Detect errors and opportunities",
+              "Identify why you're not converting more",
+              "Give you a clear and actionable plan"
+            ]
+          },
+          result: {
+            title: "Result:",
+            desc: "You know what's failing and how to improve your results immediately"
+          }
+        },
+        branding: {
+          title: "BRANDING",
+          desc: "We renew your image so your business conveys trust and professionalism from the first glance.",
+          whatWeDo: {
+            title: "What we do:",
+            items: [
+              "Redesign your visual identity (colors, typography, style)",
+              "Improve your visual presence in social media",
+              "Adapt your image to your client type",
+              "Create a coherent visual line"
+            ]
+          },
+          result: {
+            title: "Result:",
+            desc: "Your business stops looking like 'just another one' and starts looking like a serious and attractive brand"
+          }
+        },
+        contentCreation: {
+          title: "CONTENT CREATION",
+          desc: "We create the content you need to attract, build trust, and convert followers into clients.",
+          whatWeDo: {
+            title: "What we do:",
+            items: [
+              "Plan monthly content",
+              "Create publications (posts, copies, video ideas)",
+              "Adapt content to your business and ideal client",
+              "Maintain a constant and professional presence"
+            ]
+          },
+          result: {
+            title: "Result:",
+            desc: "Your social networks stop being static and start working for you"
+          }
+        },
+        metricsTracking: {
+          title: "METRICS TRACKING",
+          desc: "We help you understand your numbers and make better growth decisions.",
+          whatWeDo: {
+            title: "What we do:",
+            items: [
+              "Review the performance of your campaigns and actions",
+              "Explain the data in a simple way (no technicalities)",
+              "Detect what is working and what is not",
+              "Guide you on the next steps"
+            ]
+          },
+          result: {
+            title: "Result:",
+            desc: "You stop going 'blind' and start making decisions based on real data"
+          }
+        }
+      }
+    },
+    packages: {
+      title: "Our {packages}",
+      packages: "Packages",
+      description: "Simple, results-driven solutions for local business growth.",
+      cta: "Choose this package",
+      learnMore: "Full details",
+      from: "From",
+      oneTime: "One-time",
+      perMonth: "/month",
+      list: [
+        {
+          id: "startup",
+          title: "STARTUP PACK",
+          shortDesc: "Start receiving client inquiries in a short time, even if you're starting from scratch.",
+          price: "150€",
+          type: "oneTime",
+          includes: [
+            "Ad campaign setup",
+            "Basic ad creation",
+            "Lead capture system (WhatsApp/Form)",
+            "Initial metrics configuration"
+          ],
+          result: "First real contacts and system running"
+        },
+        {
+          id: "management",
+          title: "MONTHLY MANAGEMENT",
+          shortDesc: "We take care of your campaigns and content so you have a steady stream of clients.",
+          price: "300€",
+          type: "monthly",
+          includes: [
+            "Campaign management & optimization",
+            "4–8 posts per month",
+            "1–2 video pieces or reels",
+            "Basic metrics tracking",
+            "Ongoing support"
+          ],
+          result: "Constant presence + active capture"
+        },
+        {
+          id: "growth",
+          title: "GROWTH PACK",
+          shortDesc: "We analyze, optimize, and scale your marketing to get more clients with what you already have.",
+          price: "700€",
+          type: "monthly",
+          includes: [
+            "Results optimization",
+            "Advanced campaign management",
+            "8–16 posts per month",
+            "2–4 videos or advanced creatives",
+            "Metrics tracking & analysis"
+          ],
+          result: "More impact, more conversions, more volume"
+        },
+        {
+          id: "image",
+          title: "IMAGE PACK",
+          shortDesc: "We improve your image so your business conveys trust from the first glance.",
+          price: "200€",
+          type: "oneTime",
+          includes: [
+            "Visual identity redesign",
+            "Social media adaptation"
+          ],
+          result: "More professional and attractive image"
+        }
+      ]
     }
   },
   es: {
@@ -383,6 +547,170 @@ export const translations = {
     },
     loading: {
       experience: "Cargando Experiencia"
+    },
+    servicesPage: {
+      title: "Nuestros {services} Premium",
+      services: "Servicios",
+      description: "Escala tu negocio con nuestros sistemas de marketing especializados.",
+      backToHome: "Volver al inicio",
+      contactBtn: "Preguntar por este servicio",
+      sections: {
+        digitalStartup: {
+          title: "PUESTA EN MARCHA DIGITAL",
+          desc: "Te dejamos listo para empezar a recibir contactos de clientes en pocos días, aunque nunca hayas hecho marketing online.",
+          whatWeDo: {
+            title: "Qué hacemos:",
+            items: [
+              "Analizamos tu negocio y lo que ofreces",
+              "Definimos un mensaje claro para atraer clientes",
+              "Creamos y configuramos tus primeras campañas",
+              "Diseñamos anuncios simples y efectivos",
+              "Activamos un sistema para que te contacten (WhatsApp o formulario)"
+            ]
+          },
+          result: {
+            title: "Resultado:",
+            desc: "Empiezas a recibir contactos reales y entiendes cómo funciona tu captación online"
+          }
+        },
+        resultsOptimization: {
+          title: "OPTIMIZACIÓN DE RESULTADOS",
+          desc: "Analizamos lo que ya estás haciendo y te decimos exactamente qué cambiar para conseguir más clientes sin gastar más.",
+          whatWeDo: {
+            title: "Qué hacemos:",
+            items: [
+              "Revisamos tus campañas, redes o canales actuales",
+              "Analizamos de dónde vienen tus clientes",
+              "Detectamos errores y oportunidades",
+              "Identificamos por qué no estás convirtiendo más",
+              "Te damos un plan claro y accionable"
+            ]
+          },
+          result: {
+            title: "Resultado:",
+            desc: "Sabes qué está fallando y cómo mejorar tus resultados de forma inmediata"
+          }
+        },
+        branding: {
+          title: "BRANDING",
+          desc: "Renovamos tu imagen para que tu negocio transmita confianza y profesionalidad desde el primer vistazo.",
+          whatWeDo: {
+            title: "Qué hacemos:",
+            items: [
+              "Rediseñamos tu identidad visual (colores, tipografías, estilo)",
+              "Mejoramos tu presencia en redes",
+              "Adaptamos tu imagen a tu tipo de cliente",
+              "Creamos una línea visual coherente"
+            ]
+          },
+          result: {
+            title: "Resultado:",
+            desc: "Tu negocio deja de parecer “uno más” y empieza a verse como una marca seria y atractiva"
+          }
+        },
+        contentCreation: {
+          title: "CREACIÓN DE CONTENIDO",
+          desc: "Creamos el contenido que necesitas para atraer, generar confianza y convertir seguidores en clientes.",
+          whatWeDo: {
+            title: "Qué hacemos:",
+            items: [
+              "Planificamos el contenido mensual",
+              "Creamos publicaciones (posts, copies, ideas de vídeo)",
+              "Adaptamos el contenido a tu negocio y cliente ideal",
+              "Mantenemos una presencia constante y profesional"
+            ]
+          },
+          result: {
+            title: "Resultado:",
+            desc: "Tus redes dejan de estar paradas y empiezan a trabajar para ti"
+          }
+        },
+        metricsTracking: {
+          title: "SEGUIMIENTO DE MÉTRICAS",
+          desc: "Te ayudamos a entender tus números y a tomar mejores decisiones para crecer.",
+          whatWeDo: {
+            title: "Qué hacemos:",
+            items: [
+              "Revisamos el rendimiento de tus campañas y acciones",
+              "Te explicamos los datos de forma simple (sin tecnicismos)",
+              "Detectamos qué está funcionando y qué no",
+              "Te orientamos en los siguientes pasos"
+            ]
+          },
+          result: {
+            title: "Resultado:",
+            desc: "Dejas de ir “a ciegas” y empiezas a tomar decisiones basadas en datos reales"
+          }
+        }
+      }
+    },
+    packages: {
+      title: "Nuestros {packages}",
+      packages: "Paquetes",
+      description: "Soluciones simples y orientadas a resultados para el crecimiento de negocios locales.",
+      cta: "Elegir este paquete",
+      learnMore: "Ver detalles",
+      from: "Desde",
+      oneTime: "Pago único",
+      perMonth: "/mes",
+      list: [
+        {
+          id: "startup",
+          title: "PACK ARRANQUE",
+          shortDesc: "Empieza a recibir contactos de clientes en poco tiempo, aunque partas de cero.",
+          price: "150€",
+          type: "oneTime",
+          includes: [
+            "Configuración de campañas publicitarias",
+            "Creación de anuncios básicos",
+            "Sistema de captación (WhatsApp o formulario)",
+            "Configuración inicial de métricas"
+          ],
+          result: "Primeros contactos reales y sistema funcionando"
+        },
+        {
+          id: "management",
+          title: "PACK GESTIÓN MENSUAL",
+          shortDesc: "Nos encargamos de tus campañas y contenido para que tengas un flujo constante de clientes.",
+          price: "300€",
+          type: "monthly",
+          includes: [
+            "Gestión y optimización de campañas",
+            "Creación de 4–8 publicaciones al mes",
+            "1–2 piezas de vídeo o reels",
+            "Seguimiento básico de métricas",
+            "Soporte continuo"
+          ],
+          result: "Presencia constante + captación activa"
+        },
+        {
+          id: "growth",
+          title: "PACK CRECIMIENTO",
+          shortDesc: "Analizamos, optimizamos y escalamos tu marketing para conseguir más clientes con lo que ya tienes.",
+          price: "700€",
+          type: "monthly",
+          includes: [
+            "Optimización de resultados",
+            "Gestión avanzada de campañas",
+            "Creación de 8–16 publicaciones al mes",
+            "2–4 vídeos o creatividades avanzadas",
+            "Seguimiento y análisis de métricas"
+          ],
+          result: "Más impacto, más conversiones, más volumen"
+        },
+        {
+          id: "image",
+          title: "PACK IMAGEN",
+          shortDesc: "Mejoramos tu imagen para que tu negocio transmita confianza desde el primer vistazo.",
+          price: "200€",
+          type: "oneTime",
+          includes: [
+            "Rediseño de identidad visual",
+            "Adaptación a redes sociales"
+          ],
+          result: "Imagen más profesional y atractiva"
+        }
+      ]
     }
   }
 };

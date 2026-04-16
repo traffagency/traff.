@@ -22,9 +22,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: t.nav.services, href: "/#services" },
-    { name: t.nav.work, href: "#" },
+const navLinks = [
+    { name: t.nav.services, href: "/services" },
+    { name: t.nav.work, href: "/packages" },
   ];
 
   return (
@@ -35,7 +35,11 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 lg:px-16 flex items-center justify-between">
         <div className="w-32 lg:w-48 h-10 lg:h-12 relative flex items-center">
-          <Link to="/" className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+          <Link 
+            to="/" 
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10"
+          >
             <img 
               src="https://drive.google.com/thumbnail?id=1_1-eJpU9wq7sR344MGMtCjlhrTMBQ1cn&sz=w1000&v=2" 
               alt="traff." 
@@ -48,13 +52,13 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className="text-sm font-medium text-[#d9d9d9] hover:text-white transition-colors"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
           
           <div className="flex items-center border-l border-[#333] pl-8 space-x-3">
@@ -99,14 +103,14 @@ export default function Navbar() {
             className="absolute top-full left-0 right-0 bg-[#1f1f1f] border-t border-[#333] p-6 flex flex-col space-y-4 lg:hidden"
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-lg font-medium text-[#d9d9d9]"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             
             <div className="flex items-center justify-between py-2 border-t border-[#333] mt-2 pt-4">

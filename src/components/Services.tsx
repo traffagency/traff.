@@ -4,11 +4,22 @@ import { useLanguage } from "@/src/LanguageContext";
 import ContactModal from "./ContactModal";
 import CalendlyModal from "./CalendlyModal";
 
+import { Link } from "react-router-dom";
+
 export default function Services() {
   const { t } = useLanguage();
   
+  const serviceIds = [
+    "digitalStartup",
+    "resultsOptimization",
+    "branding",
+    "contentCreation",
+    "metricsTracking"
+  ];
+
   const services = t.services.list.map((service, index) => ({
     ...service,
+    id: serviceIds[index],
     isYellow: index % 2 !== 0 // Alternate colors
   }));
 
@@ -40,11 +51,12 @@ export default function Services() {
                 </p>
                 
                 <div className="mt-8">
-                  <CalendlyModal>
-                    <button className="text-[12px] font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:opacity-70 transition-opacity whitespace-nowrap">
-                      {t.services.learnMore}
-                    </button>
-                  </CalendlyModal>
+                  <Link 
+                    to={`/services#${service.id}`}
+                    className="inline-block text-[12px] font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:opacity-70 transition-opacity whitespace-nowrap"
+                  >
+                    {t.services.learnMore}
+                  </Link>
                 </div>
               </div>
             </motion.div>
