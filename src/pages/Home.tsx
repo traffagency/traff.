@@ -1,4 +1,5 @@
 import Hero from "@/src/components/Hero";
+import SocialProof from "@/src/components/SocialProof";
 import Problem from "@/src/components/Problem";
 import Solution from "@/src/components/Solution";
 import Services from "@/src/components/Services";
@@ -20,6 +21,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <SocialProof />
         <Problem />
         <Solution />
         <Services />
