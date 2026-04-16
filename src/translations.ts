@@ -7,9 +7,12 @@ export const translations = {
       bookCall: "I want you to contact me!"
     },
     hero: {
-      title: "Stop looking {invisible} online.",
+      title: "Stop being {invisible} online.",
       invisible: "invisible",
-      subheadline: "We turn local businesses into premium digital brands. Premium social media management, content systems, and branding for SMEs who mean business.",
+      prefix: "The digital agency for",
+      dynamicWords: ["Local Businesses", "Startups", "Premium Brands"],
+      marquee: ["Branding", "Content Creation", "Metrics Analysis", "Strategic Consulting", "Paid Media"],
+      subheadline: "We turn your business into a digital reference. Social media, branding, and strategies for those who mean business.",
       ctaAudit: "Schedule your free audit",
       ctaCall: "I want you to contact me!",
       emailPrompt: "Or send us an email yourself at hello@traffagency.com",
@@ -199,7 +202,10 @@ export const translations = {
     hero: {
       title: "Deja de ser {invisible} en línea.",
       invisible: "invisible",
-      subheadline: "Convertimos negocios locales en marcas digitales premium. Gestión de redes sociales, sistemas de contenido y branding para PYMES que van en serio.",
+      prefix: "La agencia digital de",
+      dynamicWords: ["Negocios Locales", "StartUps", "Marcas Premium"],
+      marquee: ["Branding", "Creación de Contenido", "Análisis de Métricas", "Consultoría Estratégica", "Paid Media"],
+      subheadline: "Convertimos tu negocio en una referencia digital. Redes sociales, branding y estrategia para los que van en serio.",
       ctaAudit: "Agenda tu auditoría gratuita",
       ctaCall: "¡Quiero que me contactéis!",
       emailPrompt: "O mándanos tú mismo un email a hello@traffagency.com",
