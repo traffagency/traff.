@@ -184,6 +184,9 @@ export const translations = {
         descCall: "We'll call you in the next few days to schedule your discovery session.",
         descAudit: "We'll call you in the next few days to discuss your free audit."
       }
+    },
+    loading: {
+      experience: "Loading Experience"
     }
   },
   es: {
@@ -371,6 +374,9 @@ export const translations = {
         descCall: "Te llamaremos en los próximos días para programar tu sesión de descubrimiento.",
         descAudit: "Te llamaremos en los próximos días para comentar tu auditoría gratuita."
       }
+    },
+    loading: {
+      experience: "Cargando Experiencia"
     }
   }
 };
