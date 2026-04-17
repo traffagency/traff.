@@ -155,23 +155,25 @@ export const translations = {
       work: "Packages",
       privacy: "Privacy",
       terms: "Terms",
+      cookies: "Cookies",
       rights: "All rights reserved.",
       privacyTitle: "Privacy Policy",
-      termsTitle: "Terms of Service"
+      termsTitle: "Terms of Service",
+      cookiesTitle: "Cookies Policy"
     },
     modal: {
       discovery: {
         title: "How would you like to start?",
         desc: "Choose the method that works best for you to transform your business.",
-        optionForm: "Contact me",
+        optionForm: "Contact",
         optionFormDesc: "Leave us your details and we'll call you.",
         optionSchedule: "Schedule Audit",
         optionScheduleDesc: "Pick a date and time that fits you best.",
       },
       call: {
-        title: "Leave us your contact details",
+        title: "Contact",
         desc: "Leave us your email or phone number and we will contact you. Let's discuss how we can transform your brand's digital presence.",
-        btn: "Contact me!"
+        btn: "Contact us"
       },
       audit: {
         title: "Get a free brand audit",
@@ -188,7 +190,9 @@ export const translations = {
         email: "Email",
         emailPlaceholder: "hello@example.com",
         message: "Message",
-        messagePlaceholder: "Tell us about your goals..."
+        messagePlaceholder: "Tell us about your goals...",
+        back: "Back",
+        close: "Close"
       },
       success: {
         title: "Request Received!",
@@ -522,23 +526,25 @@ export const translations = {
       work: "Paquetes",
       privacy: "Privacidad",
       terms: "Términos",
+      cookies: "Cookies",
       rights: "Todos los derechos reservados.",
       privacyTitle: "Política de Privacidad",
-      termsTitle: "Términos de Servicio"
+      termsTitle: "Términos de Servicio",
+      cookiesTitle: "Política de Cookies"
     },
     modal: {
       discovery: {
         title: "¿Cómo quieres empezar?",
         desc: "Elige el método que mejor te venga para transformar tu negocio.",
-        optionForm: "Contactadme vosotros",
+        optionForm: "Contacto",
         optionFormDesc: "Déjanos tus datos y te llamaremos.",
         optionSchedule: "Agendar Auditoría",
         optionScheduleDesc: "Elige el día y la hora que mejor te venga.",
       },
       call: {
-        title: "Déjanos tus datos de contacto",
+        title: "Contacto",
         desc: "Déjanos tu correo electrónico o número de teléfono y contactaremos contigo. Hablemos de cómo podemos transformar la presencia digital de tu marca.",
-        btn: "¡Contactadme!"
+        btn: "Contactadme"
       },
       audit: {
         title: "Obtener auditoría de marca gratis",
@@ -555,7 +561,9 @@ export const translations = {
         email: "Correo Electrónico",
         emailPlaceholder: "hola@ejemplo.com",
         message: "Mensaje",
-        messagePlaceholder: "Cuéntanos sobre tus objetivos..."
+        messagePlaceholder: "Cuéntanos sobre tus objetivos...",
+        back: "Volver",
+        close: "Cerrar"
       },
       success: {
         title: "¡Solicitud Recibida!",

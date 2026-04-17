@@ -25,7 +25,7 @@ interface LeadDiscoveryModalProps {
 type ViewState = "selector" | "form" | "success";
 
 export default function LeadDiscoveryModal({ children, serviceName, packageName }: LeadDiscoveryModalProps) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   const [view, setView] = useState<ViewState>("selector");
@@ -53,7 +53,7 @@ export default function LeadDiscoveryModal({ children, serviceName, packageName 
     e.preventDefault();
     
     if (!formData.phone && !formData.email) {
-      alert(t.language === "es" 
+      alert(language === "es" 
         ? "Por favor, introduce al menos un método de contacto (teléfono o correo)." 
         : "Please provide at least one contact method (phone or email).");
       return;
@@ -180,8 +180,8 @@ export default function LeadDiscoveryModal({ children, serviceName, packageName 
                       className="rounded-xl border-zinc-200 py-6" 
                     />
                   </div>
-                  <div className="flex gap-4">
-                    <div className="space-y-2 flex-1">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
                       <label className="text-[11px] font-bold uppercase tracking-[1.5px] text-zinc-400">{t.modal.form.phone}</label>
                       <Input 
                         name="phone"
@@ -192,7 +192,7 @@ export default function LeadDiscoveryModal({ children, serviceName, packageName 
                         className="rounded-xl border-zinc-200 py-6" 
                       />
                     </div>
-                    <div className="space-y-2 flex-1">
+                    <div className="space-y-2">
                       <label className="text-[11px] font-bold uppercase tracking-[1.5px] text-zinc-400">{t.modal.form.email}</label>
                       <Input 
                         name="email"
@@ -221,7 +221,7 @@ export default function LeadDiscoveryModal({ children, serviceName, packageName 
                       onClick={() => setView("selector")}
                       className="flex-1 py-6 rounded-xl font-bold"
                     >
-                      {t.language === "es" ? "Atrás" : "Back"}
+                      {t.modal.form.back}
                     </Button>
                     <Button 
                       type="submit" 
@@ -246,7 +246,7 @@ export default function LeadDiscoveryModal({ children, serviceName, packageName 
                   onClick={() => setIsOpen(false)}
                   className="w-full py-6 rounded-xl font-bold bg-black text-white"
                 >
-                  {t.language === "es" ? "Cerrar" : "Close"}
+                  {t.modal.form.close}
                 </Button>
               </div>
             )}

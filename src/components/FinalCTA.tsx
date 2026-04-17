@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "motion/react";
 import { useLanguage } from "@/src/LanguageContext";
 
-import ContactModal from "./ContactModal";
-import CalendlyModal from "./CalendlyModal";
+import LeadDiscoveryModal from "./LeadDiscoveryModal";
 import CopyEmail from "./CopyEmail";
 
 export default function FinalCTA() {
@@ -24,16 +23,16 @@ export default function FinalCTA() {
             {t.finalCta.title.split("{premium}")[1]}
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <ContactModal type="call">
+            <LeadDiscoveryModal>
               <Button className="rounded-lg px-8 md:px-12 py-7 text-lg font-bold bg-black text-white hover:opacity-90 transition-opacity w-full sm:w-auto">
                 {t.finalCta.ctaCall}
               </Button>
-            </ContactModal>
-            <CalendlyModal>
+            </LeadDiscoveryModal>
+            <LeadDiscoveryModal>
               <Button variant="outline" className="rounded-lg px-8 md:px-12 py-7 text-lg font-bold border-black text-black hover:bg-black/5 w-full sm:w-auto">
                 {t.finalCta.ctaAudit}
               </Button>
-            </CalendlyModal>
+            </LeadDiscoveryModal>
           </div>
           <div className="flex flex-col items-center justify-center">
             <CopyEmail centered />

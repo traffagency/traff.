@@ -9,7 +9,7 @@ import FinalCTA from "@/src/components/FinalCTA";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
 import ScrollToTop from "@/src/components/ScrollToTop";
-import ContactModal from "@/src/components/ContactModal";
+import LeadDiscoveryModal from "@/src/components/LeadDiscoveryModal";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "../LanguageContext";
 
@@ -34,11 +34,11 @@ export default function Home() {
       
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-6 left-6 right-6 z-40 md:hidden">
-        <ContactModal type="call">
+        <LeadDiscoveryModal>
           <Button className="w-full py-6 rounded-lg font-bold bg-[#1f1f1f] text-white shadow-2xl hover:opacity-90 transition-opacity text-base">
             {t.nav.bookCall}
           </Button>
-        </ContactModal>
+        </LeadDiscoveryModal>
       </div>
     </div>
   );

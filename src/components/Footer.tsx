@@ -26,7 +26,6 @@ export default function Footer() {
             <div>
               <h4 className="text-[11px] font-bold uppercase tracking-[1.5px] mb-6">{t.footer.company}</h4>
               <ul className="space-y-4 text-[13px] text-zinc-500">
-                <li><Link to="/" className="hover:text-black transition-colors">{t.footer.about}</Link></li>
                 <li><Link to="/services" className="hover:text-black transition-colors">{t.nav.services}</Link></li>
                 <li><Link to="/packages" className="hover:text-black transition-colors">{t.footer.work}</Link></li>
               </ul>
@@ -42,6 +41,7 @@ export default function Footer() {
               <ul className="space-y-4 text-[13px] text-zinc-500">
                 <li><Link to="/privacy" className="hover:text-black transition-colors">{t.footer.privacy}</Link></li>
                 <li><Link to="/terms" className="hover:text-black transition-colors">{t.footer.terms}</Link></li>
+                <li><Link to="/cookies" className="hover:text-black transition-colors">{t.footer.cookies}</Link></li>
               </ul>
             </div>
           </div>
