@@ -13,7 +13,7 @@ export default function Solution() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative"
+            className="relative will-change-transform"
           >
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-brand-yellow rounded-full blur-3xl opacity-50" />
             <div className="relative bg-zinc-900 rounded-[2rem] p-8 md:p-12 text-white overflow-hidden">
@@ -67,6 +67,7 @@ export default function Solution() {
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
+            className="will-change-transform"
           >
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
               {t.solution.title.split("{authority}")[0]}

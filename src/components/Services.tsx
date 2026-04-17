@@ -41,6 +41,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
+              className="will-change-transform"
             >
               <div className={`h-full p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border flex flex-col ${
                 service.isYellow ? "bg-brand-yellow border-transparent" : "bg-white border-zinc-200"

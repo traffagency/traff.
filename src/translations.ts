@@ -97,7 +97,7 @@ export const translations = {
         "High-end visual aesthetics",
         "Direct-response copywriting",
         "Strategic growth systems",
-        "Monthly content automation"
+        "Monthly content planning"
       ]
     },
     process: {
@@ -160,6 +160,14 @@ export const translations = {
       termsTitle: "Terms of Service"
     },
     modal: {
+      discovery: {
+        title: "How would you like to start?",
+        desc: "Choose the method that works best for you to transform your business.",
+        optionForm: "Contact me",
+        optionFormDesc: "Leave us your details and we'll call you.",
+        optionSchedule: "Schedule Audit",
+        optionScheduleDesc: "Pick a date and time that fits you best.",
+      },
       call: {
         title: "Leave us your contact details",
         desc: "Leave us your email or phone number and we will contact you. Let's discuss how we can transform your brand's digital presence.",
@@ -348,8 +356,10 @@ export const translations = {
           price: "200€",
           type: "oneTime",
           includes: [
-            "Visual identity redesign",
-            "Social media adaptation"
+            "Visual identity redesign (colors, typography, and style)",
+            "New visual line proposal adapted to your business",
+            "Improve the look of your social media",
+            "Adaptation of your image to your ideal client"
           ],
           result: "More professional and attractive image"
         }
@@ -454,7 +464,7 @@ export const translations = {
         "Estética visual de alta gama",
         "Copywriting de respuesta directa",
         "Sistemas de crecimiento estratégicos",
-        "Automatización de contenido mensual"
+        "Planificacion de contenido mensual"
       ]
     },
     process: {
@@ -517,6 +527,14 @@ export const translations = {
       termsTitle: "Términos de Servicio"
     },
     modal: {
+      discovery: {
+        title: "¿Cómo quieres empezar?",
+        desc: "Elige el método que mejor te venga para transformar tu negocio.",
+        optionForm: "Contactadme vosotros",
+        optionFormDesc: "Déjanos tus datos y te llamaremos.",
+        optionSchedule: "Agendar Auditoría",
+        optionScheduleDesc: "Elige el día y la hora que mejor te venga.",
+      },
       call: {
         title: "Déjanos tus datos de contacto",
         desc: "Déjanos tu correo electrónico o número de teléfono y contactaremos contigo. Hablemos de cómo podemos transformar la presencia digital de tu marca.",
@@ -705,8 +723,10 @@ export const translations = {
           price: "200€",
           type: "oneTime",
           includes: [
-            "Rediseño de identidad visual",
-            "Adaptación a redes sociales"
+            "Rediseño de identidad visual (colores, tipografías y estilo)",
+            "Propuesta de nueva línea visual adaptada a tu negocio",
+            "Mejora del aspecto de tus redes sociales",
+            "Adaptación de la imagen a tu cliente ideal"
           ],
           result: "Imagen más profesional y atractiva"
         }

@@ -6,7 +6,7 @@ import { ArrowLeft, CheckCircle2, ChevronRight, Package, Rocket, TrendingUp, Ima
 import { Button } from "@/components/ui/button";
 import Navbar from "@/src/components/Navbar";
 import Footer from "@/src/components/Footer";
-import ContactModal from "@/src/components/ContactModal";
+import LeadDiscoveryModal from "@/src/components/LeadDiscoveryModal";
 
 const ICON_MAP = {
   startup: Rocket,
@@ -142,11 +142,11 @@ export default function PackagesPage() {
                     </div>
 
                     <div className="mt-12 pt-12 border-t border-zinc-200/50">
-                      <ContactModal type="call">
+                      <LeadDiscoveryModal packageName={pkg.title}>
                         <Button className="w-full py-8 rounded-2xl text-lg font-bold bg-black text-white hover:bg-zinc-800 transition-all select-none">
                           {t.packages.cta}
                         </Button>
-                      </ContactModal>
+                      </LeadDiscoveryModal>
                     </div>
                   </div>
                 </div>

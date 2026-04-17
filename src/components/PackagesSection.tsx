@@ -28,7 +28,7 @@ export default function PackagesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full"
+              className="bg-white p-8 rounded-3xl border border-zinc-200 shadow-sm hover:shadow-xl transition-all group flex flex-col h-full will-change-transform"
             >
               <h3 className="text-xl font-bold mb-4">{pkg.title}</h3>
               <p className="text-sm text-zinc-500 mb-6 flex-grow">{pkg.shortDesc}</p>

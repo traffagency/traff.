@@ -16,7 +16,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShouldAnimate(true);
-    }, 2500);
+    }, 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,33 +39,37 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
         <motion.div
           animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 90, 0],
-            x: [0, 100, 0],
-            y: [0, -50, 0],
+            scale: [1, 1.1, 1],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] rounded-full will-change-transform opacity-60"
+          style={{
+            background: 'radial-gradient(circle, rgba(255,251,142,0.4) 0%, rgba(255,251,142,0) 70%)'
+          }}
+        />
+        <motion.div
+          animate={{
+            scale: [1.1, 1, 1.1],
+            x: [0, -40, 0],
+            y: [0, 60, 0],
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "linear",
+            ease: "easeInOut",
           }}
-          className="absolute -top-[20%] -left-[10%] w-[60%] h-[60%] bg-brand-yellow/20 blur-[130px] rounded-[30%_70%_70%_30%/30%_30%_70%_70%]"
+          className="absolute top-[20%] -right-[10%] w-[55%] h-[55%] rounded-full will-change-transform opacity-50"
+          style={{
+            background: 'radial-gradient(circle, rgba(255,251,142,0.3) 0%, rgba(255,251,142,0) 70%)'
+          }}
         />
-        <motion.div
-          animate={{
-            scale: [1.2, 1, 1.2],
-            rotate: [0, -90, 0],
-            x: [0, -80, 0],
-            y: [0, 100, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute top-[10%] -right-[20%] w-[55%] h-[55%] bg-brand-yellow/15 blur-[140px] rounded-[70%_30%_30%_70%/70%_70%_30%_30%]"
-        />
-        <div className="absolute inset-0 bg-white/40 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-white/20" />
       </div>
 
       <div className="container mx-auto px-6 md:px-16 relative z-10">
@@ -80,17 +84,17 @@ export default function Hero() {
               {t.hero.trustQuote.replace(/"/g, '')}
             </div>
 
-            <h1 className="text-5xl md:text-[90px] font-bold tracking-[-3px] leading-[0.9] mb-8">
-              <span className="block mb-2 text-zinc-400">{t.hero.prefix}</span>
-              <div className="h-[1.1em] relative overflow-hidden flex justify-center">
+            <h1 className="text-4xl sm:text-6xl md:text-[90px] font-bold tracking-[-2px] md:tracking-[-3px] leading-[1.1] md:leading-[0.9] mb-8">
+              <span className="block mb-2 text-zinc-400 text-2xl sm:text-4xl md:text-5xl">{t.hero.prefix}</span>
+              <div className="h-[1.1em] relative overflow-hidden flex justify-center pb-2">
                 <AnimatePresence mode="wait">
                   <motion.span
                     key={wordIndex}
-                    initial={{ y: 60, opacity: 0 }}
+                    initial={{ y: "100%", opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    exit={{ y: -60, opacity: 0 }}
-                    transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                    className="absolute text-black italic underline decoration-brand-yellow decoration-8 underline-offset-[12px]"
+                    exit={{ y: "-100%", opacity: 0 }}
+                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute text-black italic underline decoration-brand-yellow decoration-4 md:decoration-8 underline-offset-[4px] md:underline-offset-[12px] whitespace-nowrap"
                   >
                     {t.hero.dynamicWords[wordIndex]}
                   </motion.span>
@@ -130,14 +134,14 @@ export default function Hero() {
       </div>
 
       {/* Infinite Services Marquee */}
-      <div className="relative py-12 border-y border-zinc-100 bg-white/50 backdrop-blur-sm mt-12 overflow-hidden select-none">
-        <div className="flex gap-20 animate-infinite-scroll w-max hover:[animation-play-state:paused] whitespace-nowrap px-10">
+      <div className="relative py-8 md:py-12 border-y border-zinc-100 bg-white/80 md:bg-white/50 md:backdrop-blur-sm mt-8 md:mt-12 overflow-hidden select-none">
+        <div className="flex gap-12 md:gap-20 animate-infinite-scroll w-max hover:[animation-play-state:paused] whitespace-nowrap px-10">
           {carouselItems.map((item, i) => (
-            <div key={i} className="flex items-center gap-8">
-              <span className="text-[20px] md:text-[32px] font-black uppercase tracking-tighter text-black/90">
+            <div key={i} className="flex items-center gap-6 md:gap-8">
+              <span className="text-[18px] md:text-[32px] font-black uppercase tracking-tighter text-black/90">
                 {item}
               </span>
-              <div className="w-3 h-3 md:w-4 md:h-4 bg-brand-yellow rotate-45 shrink-0" />
+              <div className="w-2.5 h-2.5 md:w-4 md:h-4 bg-brand-yellow rotate-45 shrink-0" />
             </div>
           ))}
         </div>

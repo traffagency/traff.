@@ -27,7 +27,7 @@ export default function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white p-8 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-zinc-100"
+              className="bg-white p-8 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-zinc-100 will-change-transform"
             >
               <h3 className="text-sm font-bold uppercase tracking-widest mb-4">{pain.title}</h3>
               <p className="text-[13px] text-zinc-500 leading-relaxed">{pain.desc}</p>
