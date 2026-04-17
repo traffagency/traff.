@@ -116,13 +116,13 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
             >
-              <LeadDiscoveryModal>
+              <LeadDiscoveryModal forceView="calendly">
                 <Button className="rounded-xl px-10 py-8 text-[18px] font-bold bg-black text-white hover:scale-[1.02] active:scale-[0.98] transition-all group w-full sm:w-auto shadow-2xl shadow-black/20">
                   {t.hero.ctaAudit}
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </LeadDiscoveryModal>
-              <LeadDiscoveryModal>
+              <LeadDiscoveryModal forceView="form">
                 <Button className="rounded-xl px-10 py-8 text-[18px] font-bold bg-brand-yellow text-black hover:scale-[1.02] active:scale-[0.98] transition-all w-full sm:w-auto shadow-2xl shadow-brand-yellow/30">
                   {t.hero.ctaCall}
                 </Button>

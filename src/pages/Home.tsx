@@ -34,7 +34,7 @@ export default function Home() {
       
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-6 left-6 right-6 z-40 md:hidden">
-        <LeadDiscoveryModal>
+        <LeadDiscoveryModal forceView="form">
           <Button className="w-full py-6 rounded-lg font-bold bg-[#1f1f1f] text-white shadow-2xl hover:opacity-90 transition-opacity text-base">
             {t.nav.bookCall}
           </Button>

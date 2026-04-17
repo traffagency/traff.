@@ -20,11 +20,12 @@ interface LeadDiscoveryModalProps {
   children: React.ReactNode;
   serviceName?: string;
   packageName?: string;
+  forceView?: "form" | "calendly";
 }
 
 type ViewState = "selector" | "form" | "success";
 
-export default function LeadDiscoveryModal({ children, serviceName, packageName }: LeadDiscoveryModalProps) {
+export default function LeadDiscoveryModal({ children, serviceName, packageName, forceView }: LeadDiscoveryModalProps) {
   const { t, language } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
@@ -40,6 +41,15 @@ export default function LeadDiscoveryModal({ children, serviceName, packageName 
 
   // NOTE: Replace this URL with your actual Calendly link
   const calendlyUrl = "https://calendly.com/traffagency0/30min";
+
+  const handleOpenInteraction = () => {
+    if (forceView === "calendly") {
+      setIsCalendlyOpen(true);
+    } else {
+      setView(forceView === "form" ? "form" : "selector");
+      setIsOpen(true);
+    }
+  };
 
   const handleOpenChange = (open: boolean) => {
     setIsOpen(open);
@@ -86,13 +96,13 @@ export default function LeadDiscoveryModal({ children, serviceName, packageName 
     <>
       <Dialog open={isOpen} onOpenChange={handleOpenChange}>
         <div 
-          onClick={() => setIsOpen(true)} 
+          onClick={handleOpenInteraction} 
           className="cursor-pointer contents"
           role="button"
           tabIndex={0}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") {
-              setIsOpen(true);
+              handleOpenInteraction();
             }
           }}
         >

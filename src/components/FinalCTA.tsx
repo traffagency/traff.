@@ -23,12 +23,12 @@ export default function FinalCTA() {
             {t.finalCta.title.split("{premium}")[1]}
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <LeadDiscoveryModal>
+            <LeadDiscoveryModal forceView="form">
               <Button className="rounded-lg px-8 md:px-12 py-7 text-lg font-bold bg-black text-white hover:opacity-90 transition-opacity w-full sm:w-auto">
                 {t.finalCta.ctaCall}
               </Button>
             </LeadDiscoveryModal>
-            <LeadDiscoveryModal>
+            <LeadDiscoveryModal forceView="calendly">
               <Button variant="outline" className="rounded-lg px-8 md:px-12 py-7 text-lg font-bold border-black text-black hover:bg-black/5 w-full sm:w-auto">
                 {t.finalCta.ctaAudit}
               </Button>
