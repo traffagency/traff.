@@ -44,6 +44,9 @@ export default function LeadDiscoveryModal({ children, serviceName, packageName,
 
   const handleOpenInteraction = () => {
     if (forceView === "calendly") {
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Schedule');
+      }
       setIsCalendlyOpen(true);
     } else {
       setView(forceView === "form" ? "form" : "selector");
@@ -78,6 +81,12 @@ export default function LeadDiscoveryModal({ children, serviceName, packageName,
         type: "selector_form",
         createdAt: serverTimestamp()
       });
+      
+      // Facebook Pixel Tracking: Lead
+      if (typeof window !== 'undefined' && (window as any).fbq) {
+        (window as any).fbq('track', 'Lead');
+      }
+
       setView("success");
     } catch (error) {
       console.error("Error adding document: ", error);
