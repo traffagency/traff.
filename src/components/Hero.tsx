@@ -6,6 +6,7 @@ import { useLanguage } from "@/src/LanguageContext";
 
 import LeadDiscoveryModal from "./LeadDiscoveryModal";
 import CopyEmail from "./CopyEmail";
+import { FloatingPaths } from "@/components/ui/background-paths";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -33,52 +34,22 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pt-32 pb-0 md:pt-48 overflow-hidden">
-      {/* Dynamic Animated Background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{
-            scale: [1, 1.1, 1],
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] rounded-full will-change-transform opacity-60"
-          style={{
-            background: 'radial-gradient(circle, rgba(255,251,142,0.4) 0%, rgba(255,251,142,0) 70%)'
-          }}
-        />
-        <motion.div
-          animate={{
-            scale: [1.1, 1, 1.1],
-            x: [0, -40, 0],
-            y: [0, 60, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute top-[20%] -right-[10%] w-[55%] h-[55%] rounded-full will-change-transform opacity-50"
-          style={{
-            background: 'radial-gradient(circle, rgba(255,251,142,0.3) 0%, rgba(255,251,142,0) 70%)'
-          }}
-        />
-        <div className="absolute inset-0 bg-white/20" />
+    <section className="relative min-h-[100dvh] flex flex-col justify-between overflow-hidden isolate pt-24 md:pt-32">
+      {/* Animated Yellow Paths Layer (Background) */}
+      <div className="absolute inset-0 -z-10 pointer-events-none">
+        <FloatingPaths position={1} />
+        <FloatingPaths position={-1} />
       </div>
 
-      <div className="container mx-auto px-6 md:px-16 relative z-10">
+      {/* Foreground Content Layer (Top) */}
+      <div className="container mx-auto px-6 md:px-16 relative z-10 flex-1 flex flex-col justify-center">
         <div className="flex flex-col items-center text-center max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             animate={shouldAnimate ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 1 }}
           >
-            <div className="mb-6 inline-flex items-center px-4 py-1.5 rounded-full bg-black/5 border border-black/5 text-[12px] font-bold uppercase tracking-[2px] text-zinc-500">
+            <div className="mb-6 inline-flex items-center px-4 py-1.5 rounded-full bg-black/5 border border-black/5 text-[12px] font-bold uppercase tracking-[2px] text-zinc-500 mt-8 md:mt-0">
               <span className="mr-2 w-1.5 h-1.5 rounded-full bg-brand-yellow animate-pulse" />
               {t.hero.trustQuote.replace(/"/g, '')}
             </div>
@@ -105,7 +76,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-[20px] md:text-[24px] text-zinc-500 leading-relaxed mb-12 max-w-3xl mx-auto font-medium"
+              className="text-[20px] md:text-[24px] text-zinc-500 leading-relaxed mb-10 max-w-3xl mx-auto font-medium"
             >
               {t.hero.subheadline}
             </motion.p>
@@ -114,7 +85,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={shouldAnimate ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ delay: 0.4, duration: 0.8 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20"
+              className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12 md:mb-0"
             >
               <LeadDiscoveryModal forceView="calendly">
                 <Button className="rounded-xl px-10 py-8 text-[18px] font-bold bg-black text-white hover:scale-[1.02] active:scale-[0.98] transition-all group w-full sm:w-auto shadow-2xl shadow-black/20">
@@ -133,7 +104,7 @@ export default function Hero() {
       </div>
 
       {/* Infinite Services Marquee */}
-      <div className="relative py-8 md:py-12 border-y border-zinc-100 bg-white/80 md:bg-white/50 md:backdrop-blur-sm mt-8 md:mt-12 overflow-hidden select-none">
+      <div className="relative py-6 md:py-8 border-y border-zinc-100 bg-white/80 md:bg-white/50 md:backdrop-blur-sm mt-auto overflow-hidden select-none">
         <div className="flex gap-12 md:gap-20 animate-infinite-scroll w-max hover:[animation-play-state:paused] whitespace-nowrap px-10">
           {carouselItems.map((item, i) => (
             <div key={i} className="flex items-center gap-6 md:gap-8">

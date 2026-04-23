@@ -17,7 +17,7 @@ export default function Home() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen bg-white font-sans text-[#1f1f1f] selection:bg-brand-yellow selection:text-[#1f1f1f]">
+    <div className="min-h-screen bg-white font-sans text-[#1f1f1f] selection:bg-brand-yellow selection:text-[#1f1f1f] isolate">
       <Navbar />
       <main>
         <Hero />
