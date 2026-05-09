@@ -311,47 +311,52 @@ export const translations = {
       list: [
         {
           id: "startup",
-          title: "STARTUP PACK",
-          shortDesc: "Start receiving client inquiries in a short time, even if you're starting from scratch.",
+          title: "BOOST PACK",
+          shortDesc: "Start capturing clients with campaigns ready to generate leads from the start.",
           price: "150€",
           type: "oneTime",
           includes: [
-            "Ad campaign setup",
-            "Basic ad creation",
-            "Lead capture system (WhatsApp/Form)",
-            "Initial metrics configuration"
+            "Initial ad campaign setup",
+            "Meta Ads or Google Ads configuration",
+            "Lead capture system (WhatsApp or form)",
+            "Initial metrics contextualization"
           ],
           result: "First real contacts and system running"
         },
         {
           id: "management",
-          title: "MONTHLY MANAGEMENT",
-          shortDesc: "We take care of your campaigns and content so you have a steady stream of clients.",
+          title: "PRESENCE PACK",
+          shortDesc: "Give your business a professional image and a solid visual base to start standing out on social media.",
           price: "300€",
-          type: "monthly",
+          type: "oneTime",
           includes: [
-            "Campaign management & optimization",
-            "4–8 posts per month",
-            "1–2 video pieces or reels",
-            "Basic metrics tracking",
-            "Ongoing support"
+            "4 initial posts",
+            "1 reel or short video",
+            "Visual design consistent with your brand",
+            "Basic profile adaptation",
+            "Visual template or initial aesthetic line",
+            "Optimized copy/texts",
+            "Ready to publish delivery",
+            "Basic content recommendations"
           ],
-          result: "Constant presence + active capture"
+          result: "Premium visual base + active presence"
         },
         {
           id: "growth",
           title: "GROWTH PACK",
-          shortDesc: "We analyze, optimize, and scale your marketing to get more clients with what you already have.",
+          shortDesc: "We manage and optimize your marketing to generate constant growth and improve results month after month.",
           price: "700€",
           type: "monthly",
           includes: [
+            "Monthly strategy and planning",
+            "Campaign management & optimization",
+            "Metrics tracking & analysis",
             "Results optimization",
-            "Advanced campaign management",
             "8–16 posts per month",
             "2–4 videos or advanced creatives",
-            "Metrics tracking & analysis"
+            "Continuous content and campaign management"
           ],
-          result: "More impact, more conversions, more volume"
+          result: "Better performance, more conversions, scaling volume"
         },
         {
           id: "image",
@@ -682,47 +687,52 @@ export const translations = {
       list: [
         {
           id: "startup",
-          title: "PACK ARRANQUE",
-          shortDesc: "Empieza a recibir contactos de clientes en poco tiempo, aunque partas de cero.",
+          title: "PACK IMPULSO",
+          shortDesc: "Empieza a captar clientes con campañas preparadas para generar contactos desde el inicio.",
           price: "150€",
           type: "oneTime",
           includes: [
-            "Configuración de campañas publicitarias",
-            "Creación de anuncios básicos",
+            "Configuración inicial de campañas publicitarias",
+            "Configuración de Meta Ads o Google Ads",
             "Sistema de captación (WhatsApp o formulario)",
-            "Configuración inicial de métricas"
+            "Contextualización inicial de métricas"
           ],
           result: "Primeros contactos reales y sistema funcionando"
         },
         {
           id: "management",
-          title: "PACK GESTIÓN MENSUAL",
-          shortDesc: "Nos encargamos de tus campañas y contenido para que tengas un flujo constante de clientes.",
+          title: "PACK PRESENCIA",
+          shortDesc: "Dale a tu negocio una imagen profesional y una base visual sólida para empezar a destacar en redes sociales.",
           price: "300€",
-          type: "monthly",
+          type: "oneTime",
           includes: [
-            "Gestión y optimización de campañas",
-            "Creación de 4–8 publicaciones al mes",
-            "1–2 piezas de vídeo o reels",
-            "Seguimiento básico de métricas",
-            "Soporte continuo"
+            "4 publicaciones iniciales",
+            "1 reel o vídeo corto",
+            "Diseño visual coherente con tu marca",
+            "Adaptación básica del perfil",
+            "Plantilla visual o línea estética inicial",
+            "Copies/textos optimizados",
+            "Entrega lista para publicar",
+            "Recomendaciones básicas de contenido"
           ],
-          result: "Presencia constante + captación activa"
+          result: "Base visual premium + presencia activa"
         },
         {
           id: "growth",
           title: "PACK CRECIMIENTO",
-          shortDesc: "Analizamos, optimizamos y escalamos tu marketing para conseguir más clientes con lo que ya tienes.",
+          shortDesc: "Gestionamos y optimizamos tu marketing para generar un crecimiento constante y mejorar resultados mes a mes.",
           price: "700€",
           type: "monthly",
           includes: [
+            "Estrategia y planificación mensual",
+            "Gestión y optimización de campañas",
+            "Seguimiento y análisis de métricas",
             "Optimización de resultados",
-            "Gestión avanzada de campañas",
             "Creación de 8–16 publicaciones al mes",
             "2–4 vídeos o creatividades avanzadas",
-            "Seguimiento y análisis de métricas"
+            "Gestión continua de contenido y campañas"
           ],
-          result: "Más impacto, más conversiones, más volumen"
+          result: "Mejor rendimiento, más conversiones, volumen de escalado"
         },
         {
           id: "image",
