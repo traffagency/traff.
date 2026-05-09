@@ -87,10 +87,24 @@ async function startServer() {
     });
   } else {
     const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
+    app.use(express.static(distPath, {
+      setHeaders: (res, filePath) => {
+        if (filePath.match(/\.(html)$/)) {
+          // HTML files changed often
+          res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+        } else if (filePath.match(/\.(js|css)$/)) {
+          // React/Vite build files have content hashes, they can be cached forever
+          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        } else if (filePath.match(/\.(png|jpg|jpeg|gif|svg|ico|webp|woff|woff2)$/)) {
+          // Images and fonts cache forever
+          res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+        }
+      }
+    }));
     
     // SPA Fallback: handle all other requests by serving index.html
     app.get('*', (req, res) => {
+      res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }

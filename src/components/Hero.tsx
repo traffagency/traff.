@@ -94,7 +94,7 @@ export default function Hero() {
                 </Button>
               </LeadDiscoveryModal>
               <LeadDiscoveryModal forceView="form">
-                <Button className="rounded-xl px-10 py-8 text-[18px] font-bold bg-brand-yellow text-black hover:scale-[1.02] active:scale-[0.98] transition-all w-full sm:w-auto shadow-2xl shadow-brand-yellow/30">
+                <Button className="rounded-xl px-10 py-8 text-[18px] font-bold bg-brand-yellow text-black hover:bg-brand-yellow hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all w-full sm:w-auto shadow-2xl shadow-brand-yellow/30">
                   {t.hero.ctaCall}
                 </Button>
               </LeadDiscoveryModal>

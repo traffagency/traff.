@@ -13,7 +13,10 @@ export default function Footer() {
               <img 
                 src="https://drive.google.com/thumbnail?id=1_1-eJpU9wq7sR344MGMtCjlhrTMBQ1cn&sz=w1000&v=2" 
                 alt="traff." 
+                width={300}
+                height={100}
                 className="h-16 w-auto object-contain"
+                style={{ aspectRatio: "3/1" }}
                 referrerPolicy="no-referrer"
               />
             </Link>

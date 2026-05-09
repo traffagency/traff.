@@ -43,7 +43,10 @@ const navLinks = [
             <img 
               src="https://drive.google.com/thumbnail?id=1_1-eJpU9wq7sR344MGMtCjlhrTMBQ1cn&sz=w1000&v=2" 
               alt="traff." 
+              width={300}
+              height={100}
               className="h-32 lg:h-40 w-auto object-contain max-w-none"
+              style={{ aspectRatio: "3/1" }}
               referrerPolicy="no-referrer"
             />
           </Link>
@@ -78,7 +81,7 @@ const navLinks = [
           </div>
 
           <CalendlyModal>
-            <Button className="rounded-lg px-5 py-2.5 text-[13px] font-semibold bg-[#d9d9d9] text-[#1f1f1f] hover:opacity-90 transition-opacity">
+            <Button className="rounded-lg px-5 py-2.5 text-[13px] font-semibold bg-[#d9d9d9] text-[#1f1f1f] hover:bg-[#c0c0c0] transition-opacity">
               {t.nav.getAudit}
             </Button>
           </CalendlyModal>
@@ -141,7 +144,7 @@ const navLinks = [
             </div>
 
             <ContactModal type="call">
-              <Button className="rounded-full w-full py-6 font-bold bg-[#d9d9d9] text-[#1f1f1f]">
+              <Button className="rounded-full w-full py-6 font-bold bg-[#d9d9d9] text-[#1f1f1f] hover:bg-[#c0c0c0]">
                 {t.nav.bookCall}
               </Button>
             </ContactModal>
